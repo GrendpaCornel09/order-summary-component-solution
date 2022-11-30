@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+    /* attribution */
+    .attribution { font-size: 11px; text-align: center; margin-top: 10px;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+    /*  */
+
+    body{
+      background-color: hsl(223, 47%, 23%);
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    .main{
+      /* flexbox */
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      /* positioning */
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto;
+
+      /* looks */
+      background-color: hsl(225, 100%, 94%);
+      border-radius: 15px;
+      min-height: 85vh;
+      width: 30vw;
+    }
+
+    .main img{
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+      width: 30vw;
+      height: fit-content;
+    }
+
+    .plan{
+      background-color: hsl(225, 26%, 82%);
+      border-radius: 15px;
+
+      /* flexbox */
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+
+      /* size */
+      width: 25vw;
+      height: 15vh;
+    }
+
+    .plan-left img{
+      width: 5vw;
+      margin: 15px;
+    }
+
+    .plan-middle{
+      /* flex */
+      display: flex;
+      flex-direction: column;
+    }
+
+    .plan-middle p{
+      margin-right: 50px;
+    }
+
+    .payment{
+      /* flexbox */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      /* coloring */
+      background-color: hsl(245, 75%, 52%);
+      color: hsl(225, 100%, 94%);
+
+      /* shadow */
+      box-shadow: 0px 20px 30px -15px hsl(245, 75%, 52%);
+      /* size */
+      width: 25vw;
+      height: 7vh;
+      border-radius: 10px;
+
+      /* font */
+      font-size: 12px;
+      font-weight: 500;
+
+      /* margin */
+      margin-top: 5vh;
+
+      /* transition */
+      transition: 0.2s ease-in-out;
+    }
+
+    .payment:hover{
+      background-color: hsl(245, 70%, 58%);
+      cursor: pointer;
+    }
+
+    .cancel-payment{
+      /* flexbox */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      /* coloring */
+      color: hsl(230, 6%, 60%);
+
+      /* font */
+      font-size: 12px;
+      font-weight: 500;
+
+      /* margin */
+      margin-bottom: 10px;
+      margin-top: 10px;
+
+      /* transition */
+      transition: 0.2s ease-in-out;
+    }
+
+    .cancel-payment:hover{
+      color: hsl(223, 47%, 23%);
+      cursor: pointer;
+    }
+
+    #title{
+      /* margin: 4vh 5vh; */
+      margin-top: 4vh;
+      margin-left: 5vh;
+      margin-right: 5vh;
+    }
+
+    #desc{
+      color: hsl(224, 23%, 55%);
+      margin-left: 7vh;
+      margin-right: 7vh;
+      margin-bottom: 3vh;
+      margin-top: -2vh;
+      font-size: 15px;
+    }
+
+    #annual{
+      margin-bottom: -10px;
+      font-size: 14px;
+    }
+
+    #price{
+      margin-top: 1px;
+      font-size: 14px;
+    }
+
+    #change{
+      /* flex */
+      display: flex;
+      justify-content: right;
+
+      text-decoration: underline;
+      color: hsl(245, 65%, 45%);
+      transition: 0.2s ease-in-out;
+    }
+
+    #change:hover{
+      color: hsl(245, 70%, 58%);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="main">
+      <img src="images/illustration-hero.svg" alt="checkout">
+      <h2 id="title">Order Summary</h2>
+      <p id="desc">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+      <div class="plan">
+        <div class="plan-left">
+          <img src="images/icon-music.svg" alt="music">
+        </div>
+        <div class="plan-middle">
+          <p id="annual">Annual Plan</p><br >
+          <p id="price">$59.99/year</p>
+        </div>
+        <div class="plan-right">
+          <p id="change">Change</p>
+        </div>
+      </div>
+      <div class="payment">
+        <h3>Proceed to Payment</h3>
+      </div>
+      <div class="cancel-payment">
+        <h3>Cancel Order</h3>
+      </div>
+    </div>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/GrendpaCornel09">GrendpaCornel09 on GitHub</a>.
+  </div>
+</body>
+</html>
